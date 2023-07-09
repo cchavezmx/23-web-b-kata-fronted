@@ -1,9 +1,9 @@
 function TarjetaProduct ({ productData }) {
-    const { title, price, image } = productData || {}
+  const { title, price, image } = productData || {}
 
-    return (
+  return (
     <>
-        <h1>Tarjeta de producto</h1>                      
+        <h1>Tarjeta de producto</h1>
           <div>
             <h1>{ title }</h1>
                 <p>
@@ -13,9 +13,9 @@ function TarjetaProduct ({ productData }) {
                   image &&
                   <img className='product-img' src={image} alt={title} />
                 }
-          </div>                   
+          </div>
     </>
-    )
+  )
 }
 
 export default TarjetaProduct
