@@ -1,6 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400&display=swap');
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  --very-darkvblue: hsl(220, 13%, 13%);
+  --dark-grayish: blue: hsl(219, 9%, 45%);
+  --grayish-blue: hsl(220, 14%, 75%);
+  --light-grayish-blue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --orange: hsl(26, 100%, 55%);
+  --pale-orange: hsl(25, 100%, 94%);
+
+}
+
+h3{  
+  color: var(--orange)
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: #f5f5f5;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.product-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card-detail{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

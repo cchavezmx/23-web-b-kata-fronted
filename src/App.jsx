@@ -1,6 +1,8 @@
 import './App.css'
 // vistas
 import DashboardHOC from './Dahsboard'
+import Layout from './components/Layout'
+import ProductDetail from './components/ProductDetail'
 
 // SPA
 // Rutas //
@@ -11,7 +13,11 @@ import DashboardHOC from './Dahsboard'
 function App () {
   return (
     <>
-     <DashboardHOC />
+    <div className="w-screen h-auto max-w-full">
+      <Layout />
+      <DashboardHOC />
+      <ProductDetail />
+    </div>
     </>
   )
 }

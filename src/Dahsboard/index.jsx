@@ -4,7 +4,6 @@ import useSWR from '../hooks/useSWR'
 const API_URL = import.meta.env.VITE_API_URL
 
 function DashboardHOC () {
-// const { data: productData, loading, error } = useSWR({ url: `${API_URL}/products/2` })
   const { data: productData, loading, error } = useSWR({ url: `${API_URL}/products` })
 
   return (
