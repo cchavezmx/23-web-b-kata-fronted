@@ -1,7 +1,7 @@
 // todo la carga logica
 import DashboardView from './DashboardView'
 import useSWR from '../hooks/useSWR'
-const API_URL = import.meta.env.VITE_API_URL
+import { API_URL } from '../config/CONST'
 
 function DashboardHOC () {
   const { data: productData, loading, error } = useSWR({ url: `${API_URL}/products` })

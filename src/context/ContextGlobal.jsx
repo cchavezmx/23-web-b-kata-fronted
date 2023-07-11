@@ -9,33 +9,6 @@ import {
 const context = createContext()
 const Provider = context.Provider
 const ContextGlobalProvider = ({ children }) => {
-  // vistas
-  const [dashboard, setDashbord] = useState(true)
-  const [carrtio, setCarrito] = useState(false)
-  const [productDetail, setProductDetail] = useState(false)
-
-  const handledChangeView = (view) => {
-    switch (view) {
-      case 'dashboard':
-        setDashbord(true)
-        setCarrito(false)
-        setProductDetail(false)
-        break
-      case 'productDetail':
-        setDashbord(false)
-        setCarrito(false)
-        setProductDetail(true)
-        break
-      case 'carrito':
-        setDashbord(false)
-        setCarrito(true)
-        setProductDetail(false)
-        break
-      default:
-        return null
-    }
-  }
-
   const [productos, setProducts] = useState([])
   const addProduct = (producto) => {
     // push a un arreglo dentro de un useState
@@ -44,10 +17,6 @@ const ContextGlobalProvider = ({ children }) => {
 
   return (
     <Provider value={{
-      handledChangeView,
-      dashboard,
-      carrtio,
-      productDetail,
       addProduct,
       productos
     }}>
