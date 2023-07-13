@@ -1,24 +1,22 @@
 import { useGlobalContext } from '../../context/ContextGlobal'
+import { useParams, useLocation } from 'react-router-dom'
+import SWR from '../../hooks/useSWR'
 
 import ProductDetailView from './ProductDetailView'
 
 function ProductDetail () {
   const { addProduct } = useGlobalContext()
+  const params = useParams()
+  const location = useLocation()
+  // params son parametros de RUTAS
+  // estado y el path name
+  console.log({ params, location })
 
-  const data = {
-    id: 19,
-    title: "Opna Women's Short Sleeve Moisture",
-    price: 7.95,
-    description: '100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort',
-    category: "women's clothing",
-    image: 'https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg',
-    rating: {
-      rate: 4.5,
-      count: 146
-    }
-  }
+  const { data: productData } = SWR({
+    url: `https://fakestoreapi.com/products/${params.id}`
+  })
 
-  return <ProductDetailView data={data} addProduct={addProduct} />
+  return <ProductDetailView data={productData} addProduct={addProduct} />
 }
 
 export default ProductDetail
