@@ -8,6 +8,8 @@ import ProductDetail from './components/ProductDetail/index.jsx'
 import Layout from './components/Layout/index.jsx'
 import ErrorPage from './View/ErrorPage.jsx'
 import CartPage from './View/CartPage.jsx'
+import Login from './View/Login/index.jsx'
+import PrivateRoute from './components/PrivateRoute/index.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,7 +23,14 @@ const router = createBrowserRouter([
   },
   {
     path: 'cart',
-    element: <CartPage />
+    element:
+    <PrivateRoute>
+      <CartPage />
+    </PrivateRoute>
+  },
+  {
+    path: 'login',
+    element: <Login />
   }
 ])
 

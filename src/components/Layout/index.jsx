@@ -7,7 +7,7 @@ function Layout ({ children }) {
   const { productos } = useGlobalContext()
 
   return (
-    <>
+    <div className="w-screen h-auto max-w-full">
      <nav className="bg-blue-600 flex justify-between items-center flex-col md:flex-row p-5">
       <h1 className="flex flex-basis-1/3 text-5xl mx-10 text-gray-100">Devf &lt;Market&gt;</h1>
         <ol className="flex flex-basis-1/3 gap-2 text-2xl">
@@ -17,7 +17,9 @@ function Layout ({ children }) {
             </a>
           </li>
           <li className="mx-4 text-gray-50 hover:text-gray-600 hover:bg-blue-200 p-2 rounded-sm px-4 hover:cursor-pointer">
+          <a href='/cart'>
             Carrito
+          </a>
           </li>
           <li className="mx-4 text-gray-50 hover:text-gray-600 hover:bg-blue-200 p-2 rounded-sm px-4 hover:cursor-pointer">
             Colecciones
@@ -37,7 +39,7 @@ function Layout ({ children }) {
       <div className="w-screen h-auto max-w-full">
         { children }
       </div>
-    </>
+    </div>
   )
 }
 
