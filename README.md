@@ -13,7 +13,9 @@
 - - - 
 # TEMAS FALTANTES
 
+- Reducer => 
 - Testing
+- Redux ***
 - HOC *** Arquitectura de componentes > Agnostico
 - Deploy
 
