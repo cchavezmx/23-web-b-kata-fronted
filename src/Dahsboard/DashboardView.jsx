@@ -3,6 +3,7 @@ import TarjetaProduct from '../components/TarjetaProduct'
 // todo lo que sea jsx ❌ hooks, logica de JS map
 
 function DashboardView ({ data = [] }) {
+  console.log(data)
   return (
     <>
       <div className='flex flex-wrap justify-center gap-2 pt-4'>
