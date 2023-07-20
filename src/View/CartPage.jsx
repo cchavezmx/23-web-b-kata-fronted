@@ -1,7 +1,7 @@
 import { useGlobalContext } from '../context/ContextGlobal'
 
 function CartPage () {
-  const { state, dispatch } = useGlobalContext()
+  const { state } = useGlobalContext()
   console.log(state)
 
   return (

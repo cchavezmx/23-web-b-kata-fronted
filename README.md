@@ -9,15 +9,15 @@
     - Recordar que estos componentes solo afectan a los componentes hijos (RouterProvider) TODO: refactorizar el Layout // Tarea
 - Context 🚀 context + Reducer de react = zustand // - localstorage
 - API de JS para Formularios (no mas useForm 😂)
-
+- Reducer => 
+- Testing
 - - - 
 # TEMAS FALTANTES
 
-- Reducer => 
-- Testing
 - Redux ***
-- HOC *** Arquitectura de componentes > Agnostico
+- NEXTJS
 - Deploy
+- HOC *** Arquitectura de componentes > Agnostico
 
 - - -
 ### Obligatorio
